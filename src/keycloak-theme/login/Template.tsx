@@ -275,14 +275,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                         displayWide && getClassName("kcContentWrapperClass")
                       )}
                     >
-                      <div
-                        className={clsx(
-                          displayWide && [
-                            getClassName("kcFormSocialAccountContentClass"),
-                            getClassName("kcFormSocialAccountClass"),
-                          ]
-                        )}
-                      >
+                      <div>
                         <div className={getClassName("kcFormGroupClass")}>
                           <input
                             type="hidden"
