@@ -228,24 +228,6 @@ export default function Login(
             </form>
           )}
         </div>
-        <div>
-          <hr className="hr-text gradient" data-content="OR" />
-          <div
-            style={{
-              width: "100%",
-              display: "flex",
-              textAlign: "center",
-            }}
-          >
-            <a
-              className="btn-social default"
-              style={{ padding: "8px 20px", marginTop: "16px" }}
-            >
-              <img alt="google" src={btnGoogle} className="pr-2" />
-              Continue With Google
-            </a>
-          </div>
-        </div>
 
         {realm.password && social.providers !== undefined && (
           <>
