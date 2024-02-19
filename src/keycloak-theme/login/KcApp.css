@@ -226,6 +226,8 @@ body {
   width: 50% !important;
   margin: 0 auto;
   min-width: 375px;
+  display: flex;
+  flex-direction: column;
 }
 
 .titletext {
@@ -247,6 +249,23 @@ body {
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
+}
+.input_header .password {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+  align-items: center;
+  right: 2em;
+  bottom: 0;
+  top: 0;
+  position: absolute;
+  cursor: pointer;
+}
+.input_header span svg {
+  height: 2rem;
+  width: 2rem;
 }
 
 .login-pf-page .form-control {
@@ -343,7 +362,7 @@ input[type="submit"] {
 }
 .notif-content {
   padding-left: 15px;
-  padding-top: 20px;
+  padding-top: 0px;
 }
 .notif-content-title {
   margin-top: 5px;
@@ -424,10 +443,4 @@ a.backToLogin:hover {
 }
 .kcFormOptionsWrapperClass {
   margin-top: 10px;
-}
-.card-pf .login-reset-form,
-.login-form {
-  margin: 0 auto;
-  min-width: 375px;
-  width: 50% !important;
 }
