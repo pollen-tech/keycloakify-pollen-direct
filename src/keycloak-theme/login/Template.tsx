@@ -8,7 +8,6 @@ import { type TemplateProps } from "keycloakify/login/TemplateProps";
 import { useGetClassName } from "keycloakify/login/lib/useGetClassName";
 import type { KcContext } from "./kcContext";
 import pollenLogo from "./assets/pollen-logo.png";
-import pollenOriginalLogo from "./assets/pollen-icon-origin.svg";
 import type { I18n } from "./i18n";
 
 export default function Template(props: TemplateProps<KcContext, I18n>) {
@@ -154,24 +153,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                   </div>
                 ) : (
                   <>
-                    {!auth?.showResetCredentials && (
-                      <div className="notif-row kcFormCardClass">
-                        <div className="notif-icon">
-                          <img alt="Pollen Logo" src={pollenOriginalLogo} />
-                        </div>
-                        <div className="notif-content">
-                          <b className="notif-content-title">
-                            Get exclusive access to the latest Pollen Direct
-                            liquidation inventory catalogs
-                          </b>
-                          <p className="notif-content-description">
-                            Sign up for free to view catalogs featuring millions
-                            of liquidation stock, and make your bulk purchase
-                            offers direct to global manufacturers.{" "}
-                          </p>
-                        </div>
-                      </div>
-                    )}
+                    {!auth?.showResetCredentials}
                     <h1 id="kc-page-title">{headerNode}</h1>
                   </>
                 )

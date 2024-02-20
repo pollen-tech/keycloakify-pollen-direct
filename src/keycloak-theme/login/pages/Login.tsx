@@ -6,6 +6,7 @@ import { useGetClassName } from "keycloakify/login/lib/useGetClassName";
 import type { KcContext } from "../kcContext";
 import type { I18n } from "../i18n";
 import btnGoogle from "../assets/btn_google.svg";
+import pollenOriginalLogo from "../assets/pollen-icon-origin.svg";
 
 const my_custom_param = new URL(window.location.href).searchParams.get(
   "my_custom_param"
@@ -62,7 +63,7 @@ export default function Login(
         realm.password && realm.registrationAllowed && !registrationDisabled
       }
       displayWide={realm.password && social.providers !== undefined}
-      headerNode={msg("doLogIn")}
+      headerNode={""}
       infoNode={
         <div id="kc-registration">
           <span>
@@ -78,6 +79,35 @@ export default function Login(
         </div>
       }
     >
+      <div className="flex-container">
+        <div className="p-0 m-0">
+          <img alt="Pollen Logo" src={pollenOriginalLogo} />
+        </div>
+        <div className="notif-content  pt-2">
+          <p className="subtext !text-gray-900 font-extrabold notif-content-title">
+            Get exclusive access to the latest Pollen Direct liquidation
+            inventory catalogs
+          </p>
+          <p className="subtext !text-gray-900 notif-content-description">
+            Sign up for free to view catalogs featuring millions of liquidation
+            stock, and make your bulk purchase offers direct to global
+            manufacturers.{" "}
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <p
+          className="titletext font-bold text-center !text-gray-900 mt-20 mb-10"
+          style={{
+            fontSize: "24px",
+            lineHeight: "32px",
+            letterSpacing: "-0.48px",
+          }}
+        >
+          Login
+        </p>
+      </div>
       <div
         className="text-center kc-registration"
         style={{ marginBottom: "15px" }}
